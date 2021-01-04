@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+</head>
+<body>
+
+<h2>Responsive "Meet The Team" Section</h2>
+<p>Resize the browser window to see the effect.</p>
+<br>
+
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="Images/119831757_161630368912242_7920207869789649802_n.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Kpanah Koneh</h2>
+        <p class="title">CEO & Founder</p>
+        <p>I am the Ceo & Founder of Love Wildlife and Photographs Center .</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="C:\Users\Happy\Desktop\Multimedia\Gallery\My Pictures\DSC_0169.JPG" alt="Martin" style="width:100%">
+      <div class="container">
+        <h2>Francis D. T. Martin</h2>
+        <p class="title">Web Designer</p>
+        <p>Web Developer at LWLaPC</p>
+        <p>francismartindt@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="C:\Users\Happy\Desktop\Multimedia\Gallery\My Pictures\20200807155807_IMG_0105~2.JPG" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Frank Martin</h2>
+        <p class="title">Editor & Designer</p>
+        <p>Designer & Editor of Photo at LWLaPC.</p>
+        <p>fm8123724@gmail.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

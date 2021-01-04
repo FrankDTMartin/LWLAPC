@@ -1,0 +1,264 @@
+*{ box-sizing:border-box;
+        }
+body{
+    background-color: #0f0c0c;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+/* This is the style of the header of the page*/
+.header{
+background-color:skyblue;
+text-align:center;
+}
+/*Start This is the start of the style of the navagation bar */
+.nava{
+    text-align:center;
+    background-color:#656464;
+    /* The below three properties are to make the navigation bar sticky, only apply them if the bar is at the top. This is the start*/
+    /*position: fixed;
+    overflow-y: auto;
+    width: 100%;*/
+}
+/* This is the end of the top sticky navigation bar */
+a{
+    text-decoration: none
+}
+a:link{
+    color: blue;
+    font-size: 15px;
+     border-color: red;
+    border-width: 2px;
+    border-radius: 5px;
+}
+a:visited{
+    background: #465019;
+    color: beige;
+}
+a:hover{
+    color: cyan;
+    background-color: blue;
+    font-size: 20px;
+    border-color: red;
+    border-width: 2px;
+    border-radius: 5px;
+    border-style: groove;
+}
+/*End This is the end of the style of the navigation page*/
+
+.container{
+position:relative;
+    max-width: 100%;
+    height: auto;
+}
+img1:hover{
+    width: 1500px;
+    height: 800px;
+}
+
+/* This is the Start  of the style of the Webpage Head backgroud image*/
+.container .header .img{
+    /*display: block;
+    position: relative;
+	height: auto;
+	max-width: 100%;
+	left: 0%;
+	transform: translateX(-50%);
+	margin:0% 0 0% 0;
+    opacity:0.5;*/
+    display:block;
+    margin: 0 auto;
+    margin-right:auto;
+    max-width:100%;
+    height:auto;
+    opacity:0.5;
+}
+/* This is the End of the style of the Webpage Head backgroud image*/
+
+/* This is the Start  of the style of the Webpage Logo */
+span1{
+    position: absolute;
+    top: 2%;
+    left: 2%; 
+}
+/* This is the End  of the style of the Webpage Logo */
+
+/* "Start" This is the stye for the text that is on the home page header image "love Wildlife and photograph center*/
+span{
+    border-radius: 5px;
+    border-width: thick;
+    border-style: groove;
+    color: white;
+    border-color: black;
+    background-color: #656464;
+    opacity: 60%;
+    padding: 10px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: Dark power,monospace,fantasy,TRUE LIES;
+    text-align: center;
+}
+/* "End" This is the end of the style that is on the web page home*/
+
+/* This is the style of the Main block of the page*/
+main{
+    position: relative;
+   max-width: 100%;
+    height: auto;
+    background-color: #0f0c0c;
+    color: white;
+}
+.main .gallery{
+    position: relative;
+	height: auto;
+	width: 95%;
+	margin: auto;
+	padding: 45px 0;
+	display: grid;
+	grid-template-columns: auto auto auto auto; /*i write auto four time because we want four rows*/
+	grid-gap: 2vh;
+	grid-auto-flow: dense;
+    background-color: #0f0c0c;
+}
+.main .gallery .img{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9 );
+	border-radius: 2px;
+}
+.main .gallery .img:first-child{
+	grid-column-start: span 2;
+	grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(2n){
+	grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(4n+5){
+	grid-column-start: span 2;
+	grid-row-start: span 2;
+}
+.main .gallery .img:nth-child(6n+7){
+	grid-row-start: span 1;
+}
+.main .gallery .img img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	/*filter: brightness(0.6) grayscale(5);
+	border-radius: 2px;*/
+	transition: 0.3s ease-in-out;
+}
+.main .gallery .img:hover img{
+	filter: brightness(1) grayscale(0);
+    width: 110%;
+    height: 100%;
+    float: left;
+    opacity: 9;
+}
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.img:hover .overlay {
+  opacity: 1;
+}
+/* This is the start of the responsiveness of the webpage*/
+@media only screen and (max-width: 768px){
+    .main .gallery{
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+    .container .header .span1 img{
+        width: 50px;
+        height: 20px;
+        display:block;
+        margin: 0 auto;
+        margin-right:auto;
+        opacity:0.5;
+    }
+    span{
+    border-radius: 2px;
+    border-width: thick;
+    border-style: groove;
+    color: white;
+    border-color: blue;
+    background-color: teal;
+    opacity: 60%;
+    padding: 5px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8em;
+    font-family: cursive, monospace,fantasy,TRUE LIES;
+    text-align: center;
+}
+}
+@media only screen and (max-width: 430px){
+    .main .gallery{
+		display: block;
+	}
+	.main .gallery .img{
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin:2% 0;
+	}
+	.main .gallery .img img{
+		display: block;
+		filter: brightness(1) grayscale(0) opacity(9);
+	}
+  
+    span{
+    border-radius: 2px;
+    border-width: thick;
+    border-style: groove;
+    color: black;
+    border-color: black;
+    background-color: white;
+    opacity: 80%;
+    padding: 2px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+    font-family: monospace,fantasy,TRUE LIES;
+    text-align: center;
+    }
+    .container .header .span1 img{
+    display:block;
+    margin: 0 auto;
+    margin-right:auto;
+    max-width:30px;
+    height:10px;
+    /*opacity:0.5;*/
+}
+}
+ /*this is the style of the footer*/ 
+footer{
+    background-color:#656464;
+    text-align:center;
+    height: auto;
+    font-size: 13px;
+    text-align:center;
+}
+

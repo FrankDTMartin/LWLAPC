@@ -1,0 +1,49 @@
+/*Start This is the start of the style of the navagation bar */
+.nava{
+text-align:center;
+background-color:#656464;
+}
+a{
+    text-decoration: none
+}
+a:link{
+    color: blue;
+    font-size: 20px;
+     border-color: red;
+    border-width: 2px;
+    border-radius: 5px;
+}
+a:visited{
+    background: lightgrey;
+    color: beige;
+}
+a:hover{
+    color: cyan;
+    background-color: blue;
+    font-size: 25px;
+    border-color: red;
+    border-width: 2px;
+    border-radius: 5px;
+}
+/*End This is the end of the style of the navigation page*/
+
+/* Image Gallery Style Sheet Starts*/
+/* This is the style that is on the gallery container*/
+.image-container {
+   /* margin: 0 auto;  Center the image container */
+    width: 50%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.30), 0 11px 8px rgba(10,50,13,0.72);/* material box shadow */
+    margin-bottom: 20px;
+}
+/* This is the hover effect of the gallery container*/
+.image-container:hover{
+    width: 55%;
+    height: auto;
+    margin: 0 auto;
+}
+/* This is the Style of the description or writing that is on the image gallery*/
+.image-description {
+    padding: 0 15px 15px 15px;
+    text-align: center;
+}
+/* Image Gallery Style Sheet Ends*/
